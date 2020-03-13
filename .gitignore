@@ -1,0 +1,9 @@
+Makefile
+CMakeCache.txt
+*.cmake
+*.exe
+.vscode
+build
+CMakeFiles
+*.stackdump
+*.code-workspace
