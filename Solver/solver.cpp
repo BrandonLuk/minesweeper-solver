@@ -83,17 +83,17 @@ Matrix Solver::construct_logic_matrix(Matrix& board, FrontierMap& fmap)
 			{
 				bool onFringe = false;
 				//Find all adjacent cells that are fringe cells related to this hint
-                std::vector<std::pair<int, int> > adjacent_indices = board.get_adjacent_indices(row, col);
+                		std::vector<std::pair<int, int> > adjacent_indices = board.get_adjacent_indices(row, col);
 				for(std::pair<int, int> index : adjacent_indices)
-                {
-                    //If adjacent cell is "unknown"
-                    if(board(index.first, index.second) == -1)
-                    {
-                        onFringe = true;
-                        std::pair<int, int> pos(index.first, index.second);
+                		{
+                    			//If adjacent cell is "unknown"
+                    			if(board(index.first, index.second) == -1)
+                    			{
+                        			onFringe = true;
+                        			std::pair<int, int> pos(index.first, index.second);
 						unsolved_matrix(count, fmap(pos)) = 1;
-                    }
-                }
+                    			}
+               			}
 				if (onFringe)
 				{
 					unsolved_matrix(count++, unsolved_matrix.width - 1) = board(row, col);
