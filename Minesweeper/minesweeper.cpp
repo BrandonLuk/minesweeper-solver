@@ -6,7 +6,7 @@
     Launch using: ./MinesweeperSolver.exe -[easy/med/hard]                          for a manual game
     Launch using: ./MinesweeperSolver.exe -a [number of games] -[easy/med/hard]     for a given number of games to be played automatically by the solver, with statistics at the end.
 
-    In a manual game, when prompted for a move type "m" and press enter. Then give a move as "row col", such as "2 5" for row 2, columh 5. Enter anything other than "m" for the solver to make a move.
+    In a manual game, when prompted for a move type "m" and press enter. Then give a move as "row col", such as "2 5" for row 2, column 5. Enter anything other than "m" for the solver to make a move.
 */
 
 #include "../Solver/solver.hpp"
