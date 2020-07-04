@@ -15,4 +15,8 @@ This matrix is then converted to its row echelon form. If there exists a row in 
 Using this method, the solver can deduce which cells are safe and which are mines and make move accordingly until the point comes where a guess must be made.
 
 ## Probability
-If no guaranteed safe move can be found, then we find the saf*est* move.
+If no guaranteed safe move can be found, then we find the saf*est* move. The algorithm does this by generating all possible combinations of mines and safe spaces among the frontier cells. Cells that appear as safe in many combinations have a higher chance of being a safe pick. The chance of picking a safe cell among all the other covered cells outside of the frontier is also considered.
+
+# Results
+
+
