@@ -1,6 +1,8 @@
 # About
 This respository demonstrates an algorithm for solving Minesweeper. The algorithm and the internal game of Minesweeper used to test the algorithm are based on the version of the game packaged with Windows XP.
 
+![](pics/1.png)
+
 # Board Generation
 Boards are generated using the C++ STL Mersenne Twister pseudorandom number generator. After the first move is made, board cells are randomly chosen until the desired number of mines is met. A mine is placed in a randomly chose board cell if they are not the location of the first move and they do not already hold a mine.
 
@@ -18,5 +20,5 @@ Using this method, the solver can deduce which cells are safe and which are mine
 If no guaranteed safe move can be found, then we find the saf*est* move. The algorithm does this by generating all possible combinations of mines and safe spaces among the frontier cells. Cells that appear as safe in many combinations have a higher chance of being a safe pick. The chance of picking a safe cell among all the other covered cells outside of the frontier is also considered.
 
 # Results
-
+Over 3000 boards this solver achieved around a 35% winrate.
 
